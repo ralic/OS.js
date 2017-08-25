@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <!--
+    OS.js - JavaScript Cloud/Web Desktop Platform
+
+    Copyright (c) 2011-2017, Anders Evenrud <andersevenrud@gmail.com>
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met: 
+
+    1. Redistributions of source code must retain the above copyright notice, this
+       list of conditions and the following disclaimer. 
+    2. Redistributions in binary form must reproduce the above copyright notice,
+       this list of conditions and the following disclaimer in the documentation
+       and/or other materials provided with the distribution. 
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+    ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+    WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+    ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+    LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+    ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    @author  Anders Evenrud <andersevenrud@gmail.com>
+    @licence Simplified BSD License
+    -->
+    <meta name="description" content="OS.js - JavaScript Cloud/Web Desktop Platform" />
+    <meta name="keywords" content="OS.js,Web Desktop,Cloud Desktop,JavaScript OS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>OS.js</title>
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="favicon.png" />
+
+
+    <link type="text/css" rel="stylesheet" href="themes.css" />
+
+
+  <meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="Webpack App"><link rel="apple-touch-icon" sizes="57x57" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Webpack App"><link rel="icon" type="image/png" sizes="32x32" href="icons-891dece09b415f6ab5b1db7a881d3413/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="icons-891dece09b415f6ab5b1db7a881d3413/favicon-16x16.png"><link rel="shortcut icon" href="icons-891dece09b415f6ab5b1db7a881d3413/favicon.ico"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="icons-891dece09b415f6ab5b1db7a881d3413/apple-touch-startup-image-1536x2008.png"><link href="osjs.css" rel="stylesheet"></head>
+  <body>
+
+
+    <div id="LoadingScreen">
+      <img alt="" src="1f95e8c55fa8e569a25bdbb541e4c66f.png" />
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+
+    <style type="text/css">
+
+#LoadingScreen {
+  position : absolute;
+  width : 320px;
+  height : 182px;
+  top : 50%;
+  left : 50%;
+  margin-top : -91px;
+  margin-left : -160px;
+  z-index : 999;
+}
+  #LoadingScreen > .progress-bar {
+    position : absolute;
+    bottom : -3em;
+    height : 2em;
+    left : 0;
+    right : 0;
+  }
+    #LoadingScreen > .progress-bar:before {
+      content : '';
+      position : absolute;
+      top : -2px;
+      left : -2px;
+      bottom : -2px;
+      right : -2px;
+      border : 1px solid #ccc;
+      background : #ddd;
+    }
+    #LoadingScreen > .progress-bar > .progress {
+      position : absolute;
+      left : 0;
+      top : 0;
+      bottom : 0;
+      width : 0;
+      margin : 2px;
+      background : rgb(87, 42, 121);
+    }
+
+    </style>
+
+
+    <div id="Login">
+      <form method="post" id="LoginForm">
+        <div>
+          <label for="LoginUsername">Username</label>
+          <input type="text" name="LoginUsername" id="LoginUsername" value="" placeholder="Username" />
+        </div>
+        <div>
+          <label for="LoginPassword">Password</label>
+          <input type="password" name="LoginPassword" id="LoginPassword" value="" placeholder="Password" />
+        </div>
+        <div class="Submit">
+          <input type="submit" name="LoginSubmit" id="LoginSubmit" value="Login" />
+        </div>
+      </form>
+    </div>
+
+    <style type="text/css">
+
+#Login {
+  background : #fff;
+  width : 400px;
+  height : 230px;
+  padding : 20px;
+  position : absolute;
+  left : 50%;
+  top : 50%;
+  z-index : 9999;
+  margin-left : -200px;
+  margin-top : -155px;
+  border : 4px solid rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 0 0 5px 4px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0 0 5px 4px rgba(0,0,0,0.15);
+  box-shadow: 0 0 5px 4px rgba(0,0,0,0.15);
+  box-sizing : border-box;
+
+  display : none;
+}
+  #LoginForm > div {
+    margin-bottom : 20px;
+  }
+  #Login label {
+    display : block;
+    font-weight : bold;
+    height : 30px;
+    line-height : 30px;
+  }
+  #Login input[type=text],
+  #Login input[type=password] {
+    display : block;
+    width : 100%;
+    height : 24px;
+    padding : 4px;
+    line-height : 12px;
+    box-sizing : border-box;
+  }
+  #Login input[type=submit] {
+    height : 40px;
+    padding : 10px;
+    padding-left : 20px;
+    padding-right : 20px;
+    box-sizing : border-box;
+    background : rgba(0, 0, 0, .1);
+    border : 0 none;
+    cursor : pointer;
+  }
+  #Login .Submit {
+    text-align : right;
+  }
+
+    </style>
+
+
+
+
+    <script charset="utf-8" src="settings.js"></script>
+
+
+  <script type="text/javascript" src="polyfill.js"></script><script type="text/javascript" src="common.js"></script><script type="text/javascript" src="locales.js"></script><script type="text/javascript" src="osjs.js"></script></body>
+</html>
